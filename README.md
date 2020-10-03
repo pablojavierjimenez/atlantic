@@ -1,4 +1,5 @@
 # Atlantic
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/jest-community/awesome-jest)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.0.2.
 
