@@ -4,12 +4,15 @@
   - Here you can find the [Jest API Documentation](https://jestjs.io/docs/en/api)
   - This **Jest** settin is based on [this tutorial](https://dev.to/alfredoperez/angular-10-setting-up-jest-2m0l)
 
+
 - **Step 1: Install dependenciaes**
+
   ```bash
   :~$ npm install jest jest-preset-angular @types/jest --save-dev
   ```
 
 - **Step 2: Configure Jest**
+
   Create the `Jest-setup.ts` with this content:
   ```typescript
   import 'jest-preset-angular';
@@ -47,6 +50,7 @@
       //...
     }
     ```
+
 - **Step 4: Edit package.json to include Jest**
   
   then update the `package.json` with the following content:
@@ -89,3 +93,4 @@
   And Remove `karma.conf.js` and `src/test.ts` files
 
 ------
+
