@@ -4,18 +4,12 @@
   - Here you can find the [Jest API Documentation](https://jestjs.io/docs/en/api)
   - This **Jest** settin is based on [this tutorial](https://dev.to/alfredoperez/angular-10-setting-up-jest-2m0l)
 
-- **Step 1: Uninstall Karma and jasmine**
-  ```bash
-  :~$ npm uninstall karma karma-chrome-launcher karma-coverage-istanbul-reporter karma-jasmine karma-jasmine-html-reporter
-  ```
-  And Remove `karma.conf.js` and `src/test.ts` files
-
-- **Step 2: Install dependenciaes**
+- **Step 1: Install dependenciaes**
   ```bash
   :~$ npm install jest jest-preset-angular @types/jest --save-dev
   ```
 
-- **Step 3: Configure Jest**
+- **Step 2: Configure Jest**
   Create the `Jest-setup.ts` with this content:
   ```typescript
   import 'jest-preset-angular';
@@ -42,6 +36,17 @@
     ]
   }
   ```
+
+- **Step 3: add** 
+
+  Modify the `tsconfig.base.json` to add the nex configuration key:
+    ```JSON
+    {
+      //....
+      "esModuleInterop": true,
+      //...
+    }
+    ```
 - **Step 4: Edit package.json to include Jest**
   
   then update the `package.json` with the following content:
@@ -76,4 +81,11 @@
   ```bash
   :~$ npm test
   ```
-----
+
+- **Step 5: Uninstall Karma and jasmine**
+  ```bash
+  :~$ npm uninstall karma karma-chrome-launcher karma-coverage-istanbul-reporter karma-jasmine karma-jasmine-html-reporter
+  ```
+  And Remove `karma.conf.js` and `src/test.ts` files
+
+------
