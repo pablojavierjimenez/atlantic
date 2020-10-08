@@ -1,0 +1,10 @@
+
+.app_home {
+  &__container {
+    background-color:lightblue;
+    height: calc(100vh - 14vh);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -8,8 +8,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 7vh;
 
   a {
+    padding: 0 1vmin;
     color: var(--color-primary);
   }
 }

@@ -1,4 +1,4 @@
-<header>
+<header class="app_header__container">
   <div class="wrapper">
     <div>
       <svg width="40" height="40" viewBox="0 0 40 40"  version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve">
@@ -8,9 +8,8 @@
       <h1>Atlantic</h1>
     </div>
     <div>
-      <a href="" [routerLink]="'/home'">
-        Micro Flipping Book
-      </a>
+      <a [routerLink]="'/home'">home</a>
+      <a [routerLink]="'/notFound'">404</a>
     </div>
     <div>
       <app-button
