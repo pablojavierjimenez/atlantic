@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './shared/component/header/header.component';
+import { FooterComponent } from './shared/component/footer/footer.component';
+import { ButtonComponent } from './shared/component/button/button.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,
