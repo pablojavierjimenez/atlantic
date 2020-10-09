@@ -1,6 +1,6 @@
 .app_footer__container {
   color:#fff;
-  background-color: #1976d2;
+  background-color: var(--color-primary);
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 12px;;
   border-top: 1px solid rgba(0, 0, 0, 0.1);
@@ -12,6 +12,6 @@
 
   a {
     padding: 0 1vmin;
-    color: var(--color-primary);
+    color: var(--color-secondary);
   }
 }
