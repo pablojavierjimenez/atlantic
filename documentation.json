@@ -38,6 +38,62 @@
     "directives": [],
     "components": [
         {
+            "name": "AboutComponent",
+            "id": "component-AboutComponent-419d2ccd9147b188afb8d0d9a75e227c",
+            "file": "src/app/page/about/about.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-about",
+            "styleUrls": [
+                "./about.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./about.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 12
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-about',\n  templateUrl: './about.component.html',\n  styleUrls: ['./about.component.scss']\n})\nexport class AboutComponent implements OnInit {\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": ".app_about {\n  &__container {\n    background-color: lightcoral;\n    color: var(--color-secondary);\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    align-items: center;\n  }\n}\n",
+                    "styleUrl": "./about.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 8
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "\n<main class=\"app_main__container app_about__container\">\n\n  <h1>este es el about page de toda la vida</h1>\n  <p>About works!</p>\n\n\n</main>\n"
+        },
+        {
             "name": "AppComponent",
             "id": "component-AppComponent-036dc147e140de9ecc6a12d8a7407932",
             "file": "src/app/app.component.ts",
@@ -77,7 +133,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": "router-outlet {\n  display: none;\n}\n",
                     "styleUrl": "./app.component.scss"
                 }
             ],
@@ -87,7 +143,7 @@
         {
             "name": "ButtonComponent",
             "id": "component-ButtonComponent-f1ba567134dfe21adbe469f50c0b797c",
-            "file": "src/app/shared/component/button/button.component.ts",
+            "file": "src/app/shared/components/button/button.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -188,7 +244,7 @@
         {
             "name": "FooterComponent",
             "id": "component-FooterComponent-868f3962f21c76b835aad91a76be5501",
-            "file": "src/app/shared/component/footer/footer.component.ts",
+            "file": "src/app/shared/components/footer/footer.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -225,7 +281,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".app_footer__container {\n  color:#fff;\n  background-color: #1976d2;\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 12px;;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 10px 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n\n  a {\n    color: var(--color-primary);\n  }\n}\n",
+                    "data": ".app_footer__container {\n  color:#fff;\n  background-color: var(--color-primary);\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  font-size: 12px;;\n  border-top: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 10px 0;\n  display: flex;\n  align-items: center;\n  justify-content: center;\n  height: 7vh;\n\n  a {\n    padding: 0 1vmin;\n    color: var(--color-secondary);\n  }\n}\n",
                     "styleUrl": "./footer.component.scss"
                 }
             ],
@@ -244,7 +300,7 @@
         {
             "name": "HeaderComponent",
             "id": "component-HeaderComponent-e17e05d6e711ef3b017e5831c0c44363",
-            "file": "src/app/shared/component/header/header.component.ts",
+            "file": "src/app/shared/components/header/header.component.ts",
             "encapsulation": [],
             "entryComponents": [],
             "inputs": [],
@@ -307,7 +363,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": ".wrapper {\n  font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;\n  border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n  padding: 15px 20px;\n  display: flex;\n  align-items: center;\n  justify-content: space-between;\n  color: var(--color-primary);\n}\n\nsvg {\n  display: inline-block;\n  vertical-align: top;\n}\n\nh1 {\n  font-weight: 900;\n  font-size: 20px;\n  line-height: 1;\n  margin: 6px 0 6px 10px;\n  display: inline-block;\n  vertical-align: top;\n}\n\nbutton + button {\n  margin-left: 10px;\n}\n",
+                    "data": ".app_header {\n  &__container {\n    height: 7vh;\n    .wrapper {\n      font-family: \"Nunito Sans\", \"Helvetica Neue\", Helvetica, Arial, sans-serif;\n      border-bottom: 1px solid rgba(0, 0, 0, 0.1);\n      padding: 15px 20px;\n      display: flex;\n      align-items: center;\n      justify-content: space-between;\n      color: var(--color-primary);\n    }\n    svg {\n      display: inline-block;\n      vertical-align: top;\n    }\n\n    h1 {\n      font-weight: 900;\n      font-size: 20px;\n      line-height: 1;\n      margin: 6px 0 6px 10px;\n      display: inline-block;\n      vertical-align: top;\n    }\n\n    a {\n      color: var(--color-secondary);\n      font-weight: bold;\n      margin: .4vmin;\n    }\n    button + button {\n      margin-left: 10px;\n    }\n  }\n}\n",
                     "styleUrl": "./header.component.scss"
                 }
             ],
@@ -321,7 +377,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<header>\n  <div class=\"wrapper\">\n    <div>\n      <svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\"  version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 1000 1000\" enable-background=\"new 0 0 1000 1000\" xml:space=\"preserve\">\n        <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>\n        <g><path d=\"M169.3,722.1c31.2,23.3,109.8,53.3,184.2,0c0.7-0.5,66.5-48.5,134.3,0c31.2,23.3,109.8,53.3,184.2,0c0.6-0.5,66.5-48.5,134.3,0c18.4,13.7,53.2,29.8,94,29.8c28.3,0,59.5-7.8,89.8-29.6L965.7,690c-67.4,48.4-131.9,2.2-134.9,0c-74-53-152.7-23-183.6,0c-67.4,48.4-131.9,2.2-134.9,0c-74.1-53-152.7-23-183.6,0c-67.4,48.4-131.8,2.2-134.8,0C119.8,637,41.1,667,10,690.3l25,31.8C35.7,721.6,101.6,673.6,169.3,722.1L169.3,722.1z M830.8,794.8c-74-53.1-152.7-23-183.6,0c-67.4,48.3-131.9,2.2-134.9,0c-74.1-53.1-152.7-23-183.6,0c-67.4,48.3-131.8,2.2-134.8,0c-74.1-53.1-152.8-23-183.9,0.2l25,31.8c0.6-0.5,66.6-48.5,134.3,0c31.2,23.3,109.8,53.3,184.2,0c0.7-0.5,66.5-48.5,134.3,0c31.2,23.3,109.8,53.3,184.2,0c0.6-0.5,66.5-48.5,134.3,0c18.4,13.7,53.2,29.8,94,29.8c28.3,0,59.5-7.8,89.8-29.6l-24.3-32.3C898.3,843.1,833.8,797,830.8,794.8L830.8,794.8z M830.8,899.5c-74-53.1-152.7-23.1-183.6,0c-67.4,48.3-131.9,2.2-134.9,0c-74.1-53.1-152.7-23.1-183.6,0c-67.4,48.3-131.8,2.2-134.8,0c-74.1-53.1-152.8-23.1-183.9,0.3l25,31.7c0.6-0.5,66.6-48.5,134.3,0c31.2,23.3,109.8,53.3,184.2,0c0.7-0.5,66.5-48.5,134.3,0c31.2,23.3,109.8,53.3,184.2,0c0.6-0.5,66.5-48.5,134.3,0c18.4,13.8,53.2,29.8,94,29.8c28.3,0,59.5-7.8,89.8-29.6l-24.3-32.3C898.3,947.8,833.8,901.7,830.8,899.5L830.8,899.5z M799.7,222l40.6-41c6.6-6.6,6.6-17.3,0-24c-6.6-6.7-17.2-6.7-23.7,0l-40.6,41c-6.6,6.6-6.6,17.3,0,24S793.2,228.6,799.7,222L799.7,222z M894.6,495.6h62.9c8.7,0,15.7-8.6,15.7-19.1c0-10.6-7-19.1-15.7-19.1h-62.9c-8.7,0-15.8,8.5-15.8,19.1C878.9,487.1,885.9,495.6,894.6,495.6L894.6,495.6z M519.4,117.5c10.6,0,19.2-7.1,19.2-15.8V38.7h-38.4v63.1C500.2,110.5,508.7,117.5,519.4,117.5L519.4,117.5z M81.3,495.6h63c8.7,0,15.7-8.6,15.7-19.1c0-10.6-7-19.1-15.7-19.1h-63c-8.7,0-15.7,8.5-15.7,19.1C65.6,487.1,72.6,495.6,81.3,495.6L81.3,495.6z M239.1,222c6.6,6.7,17.2,6.7,23.8,0c6.6-6.6,6.6-17.3,0-24l-40.6-41c-6.6-6.7-17.2-6.7-23.8,0c-6.6,6.6-6.6,17.3,0,24L239.1,222L239.1,222z M236.8,590.1l50.7-10.9c-13.7-31.5-21.5-66.3-21.5-102.8c0-141.3,113.5-255.9,253.5-255.9S772.9,335,772.9,476.4c0,36.6-7.8,71.4-21.5,102.8l50,10.9c13-34,20.6-70.5,20.6-109.2c0-168.7-135.6-305.4-302.6-305.4c-167.1,0-302.5,136.7-302.5,305.4C216.9,519.5,223.9,556.3,236.8,590.1L236.8,590.1z\"/></g>\n        </svg>\n      <h1>Atlantic</h1>\n    </div>\n    <div>\n      <a [routerLink]=\"'/home'\">home</a>\n      <a [routerLink]=\"'/notFound'\">404</a>\n    </div>\n    <div>\n      <app-button\n        *ngIf=\"user\"\n        size=\"small\"\n        (onClick)=\"onLogout.emit($event)\"\n        label=\"Log out\"\n      ></app-button>\n      <app-button\n        *ngIf=\"!user\"\n        size=\"small\"\n        (onClick)=\"onLogin.emit($event)\"\n        label=\"Log in\"\n      ></app-button>\n      <app-button\n        *ngIf=\"!user\"\n        primary\n        size=\"small\"\n        (onClick)=\"onCreateAccount.emit($event)\"\n        label=\"Sign up\"\n      ></app-button>\n    </div>\n  </div>\n</header>\n"
+            "templateData": "<header class=\"app_header__container\">\n  <div class=\"wrapper\">\n    <div>\n      <svg width=\"40\" height=\"40\" viewBox=\"0 0 40 40\"  version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 1000 1000\" enable-background=\"new 0 0 1000 1000\" xml:space=\"preserve\">\n        <metadata> Svg Vector Icons : http://www.onlinewebfonts.com/icon </metadata>\n        <g><path d=\"M169.3,722.1c31.2,23.3,109.8,53.3,184.2,0c0.7-0.5,66.5-48.5,134.3,0c31.2,23.3,109.8,53.3,184.2,0c0.6-0.5,66.5-48.5,134.3,0c18.4,13.7,53.2,29.8,94,29.8c28.3,0,59.5-7.8,89.8-29.6L965.7,690c-67.4,48.4-131.9,2.2-134.9,0c-74-53-152.7-23-183.6,0c-67.4,48.4-131.9,2.2-134.9,0c-74.1-53-152.7-23-183.6,0c-67.4,48.4-131.8,2.2-134.8,0C119.8,637,41.1,667,10,690.3l25,31.8C35.7,721.6,101.6,673.6,169.3,722.1L169.3,722.1z M830.8,794.8c-74-53.1-152.7-23-183.6,0c-67.4,48.3-131.9,2.2-134.9,0c-74.1-53.1-152.7-23-183.6,0c-67.4,48.3-131.8,2.2-134.8,0c-74.1-53.1-152.8-23-183.9,0.2l25,31.8c0.6-0.5,66.6-48.5,134.3,0c31.2,23.3,109.8,53.3,184.2,0c0.7-0.5,66.5-48.5,134.3,0c31.2,23.3,109.8,53.3,184.2,0c0.6-0.5,66.5-48.5,134.3,0c18.4,13.7,53.2,29.8,94,29.8c28.3,0,59.5-7.8,89.8-29.6l-24.3-32.3C898.3,843.1,833.8,797,830.8,794.8L830.8,794.8z M830.8,899.5c-74-53.1-152.7-23.1-183.6,0c-67.4,48.3-131.9,2.2-134.9,0c-74.1-53.1-152.7-23.1-183.6,0c-67.4,48.3-131.8,2.2-134.8,0c-74.1-53.1-152.8-23.1-183.9,0.3l25,31.7c0.6-0.5,66.6-48.5,134.3,0c31.2,23.3,109.8,53.3,184.2,0c0.7-0.5,66.5-48.5,134.3,0c31.2,23.3,109.8,53.3,184.2,0c0.6-0.5,66.5-48.5,134.3,0c18.4,13.8,53.2,29.8,94,29.8c28.3,0,59.5-7.8,89.8-29.6l-24.3-32.3C898.3,947.8,833.8,901.7,830.8,899.5L830.8,899.5z M799.7,222l40.6-41c6.6-6.6,6.6-17.3,0-24c-6.6-6.7-17.2-6.7-23.7,0l-40.6,41c-6.6,6.6-6.6,17.3,0,24S793.2,228.6,799.7,222L799.7,222z M894.6,495.6h62.9c8.7,0,15.7-8.6,15.7-19.1c0-10.6-7-19.1-15.7-19.1h-62.9c-8.7,0-15.8,8.5-15.8,19.1C878.9,487.1,885.9,495.6,894.6,495.6L894.6,495.6z M519.4,117.5c10.6,0,19.2-7.1,19.2-15.8V38.7h-38.4v63.1C500.2,110.5,508.7,117.5,519.4,117.5L519.4,117.5z M81.3,495.6h63c8.7,0,15.7-8.6,15.7-19.1c0-10.6-7-19.1-15.7-19.1h-63c-8.7,0-15.7,8.5-15.7,19.1C65.6,487.1,72.6,495.6,81.3,495.6L81.3,495.6z M239.1,222c6.6,6.7,17.2,6.7,23.8,0c6.6-6.6,6.6-17.3,0-24l-40.6-41c-6.6-6.7-17.2-6.7-23.8,0c-6.6,6.6-6.6,17.3,0,24L239.1,222L239.1,222z M236.8,590.1l50.7-10.9c-13.7-31.5-21.5-66.3-21.5-102.8c0-141.3,113.5-255.9,253.5-255.9S772.9,335,772.9,476.4c0,36.6-7.8,71.4-21.5,102.8l50,10.9c13-34,20.6-70.5,20.6-109.2c0-168.7-135.6-305.4-302.6-305.4c-167.1,0-302.5,136.7-302.5,305.4C216.9,519.5,223.9,556.3,236.8,590.1L236.8,590.1z\"/></g>\n        </svg>\n      <h1>Atlantic</h1>\n    </div>\n    <div>\n      <a [routerLink]=\"'/home'\">home</a>\n      <a [routerLink]=\"'/about'\">about</a>\n      <a [routerLink]=\"'/notFound'\">404</a>\n    </div>\n    <div>\n\n      <app-button\n        *ngIf=\"user\"\n        size=\"small\"\n        (onClick)=\"onLogout.emit($event)\"\n        label=\"Log out\"\n      ></app-button>\n\n      <app-button\n        *ngIf=\"!user\"\n        size=\"small\"\n        (onClick)=\"onLogin.emit($event)\"\n        label=\"Log in\"\n      ></app-button>\n\n      <app-button\n        *ngIf=\"!user\"\n        primary\n        size=\"small\"\n        (onClick)=\"onCreateAccount.emit($event)\"\n        label=\"Sign up\"\n      ></app-button>\n    </div>\n  </div>\n</header>\n"
         },
         {
             "name": "HomeComponent",
@@ -363,7 +419,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "\n.app_home {\n  &__container {\n    background-color:lightblue;\n    height: calc(100vh - 100px);\n    display: flex;\n    justify-content: center;\n    align-items: center;\n  }\n}\n",
+                    "data": "\n.app_home {\n  &__container {\n    align-items: center;\n    background-color:lightblue;\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n  }\n}\n",
                     "styleUrl": "./home.component.scss"
                 }
             ],
@@ -377,7 +433,7 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<hea\n<main class=\"app_home__container\">\n  <h1>Hola soyla jom!</h1>\n</main>\n"
+            "templateData": "\n<main class=\"app_main__container app_home__container\">\n  <h1>Hola soyla jom!</h1>\n  <br/>\n  <app-simple-button buttonText=\"Click ME!!!\"></app-simple-button>\n</main>\n"
         },
         {
             "name": "NotFoundComponent",
@@ -419,7 +475,7 @@
             "assetsDirs": [],
             "styleUrlsData": [
                 {
-                    "data": "",
+                    "data": ".app_notFound {\n  &__container {\n    background-color: orangered;\n    color: var(--color-primary);\n    display: flex;\n    justify-content: center;\n    flex-direction: column;\n    align-items: center;\n  }\n}\n",
                     "styleUrl": "./not-found.component.scss"
                 }
             ],
@@ -433,10 +489,180 @@
             "implements": [
                 "OnInit"
             ],
-            "templateData": "<h1>404 not found :(</h1>\n<p>not-found works!</p>\n"
+            "templateData": "\n<main class=\"app_main__container app_notFound__container\">\n\n  <h1>404 not found :(</h1>\n  <p>not-found works!</p>\n\n</main>\n"
+        },
+        {
+            "name": "SimpleButtonComponent",
+            "id": "component-SimpleButtonComponent-de6444010265272bca16fffa8db5006d",
+            "file": "src/app/shared/components/simple-button/simple-button.component.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-simple-button",
+            "styleUrls": [
+                "./simple-button.component.scss"
+            ],
+            "styles": [],
+            "templateUrl": [
+                "./simple-button.component.html"
+            ],
+            "viewProviders": [],
+            "inputsClass": [
+                {
+                    "name": "buttonText",
+                    "line": 14,
+                    "type": "string"
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "isOn",
+                    "type": "boolean",
+                    "optional": false,
+                    "description": "<p>this is the posible state</p>\n",
+                    "line": 13,
+                    "modifierKind": [
+                        114
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "clicked",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "boolean",
+                    "typeParameters": [],
+                    "line": 25,
+                    "description": "<ul>\n<li>Shwitch the isOn variable state.</li>\n</ul>\n",
+                    "jsdoctags": [
+                        {
+                            "tagName": {
+                                "pos": 471,
+                                "end": 478,
+                                "flags": 0,
+                                "escapedText": "returns"
+                            },
+                            "comment": "<p>boolean</p>\n"
+                        }
+                    ]
+                },
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 18
+                }
+            ],
+            "hostBindings": [],
+            "hostListeners": [],
+            "description": "",
+            "rawdescription": "",
+            "type": "component",
+            "sourceCode": "import { Component, Input, OnInit } from '@angular/core';\n\n@Component({\n  selector: 'app-simple-button',\n  templateUrl: './simple-button.component.html',\n  styleUrls: ['./simple-button.component.scss']\n})\nexport class SimpleButtonComponent implements OnInit {\n\n  /**\n   * this is the posible state\n   */\n  public isOn: boolean;\n  @Input() buttonText: string;\n\n  constructor() { }\n\n  ngOnInit(): void {\n  }\n  /**\n   * * Shwitch the isOn variable state.\n   * @method\n   * @returns boolean\n   */\n  clicked(): boolean {\n    return this.isOn = !this.isOn;\n  }\n\n  get message(): string {\n    return `The light is ${this.isOn ? 'On' : 'Off'}`;\n  }\n\n}\n",
+            "assetsDirs": [],
+            "styleUrlsData": [
+                {
+                    "data": "",
+                    "styleUrl": "./simple-button.component.scss"
+                }
+            ],
+            "stylesData": "",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "args": [],
+                "line": 14
+            },
+            "implements": [
+                "OnInit"
+            ],
+            "accessors": {
+                "message": {
+                    "name": "message",
+                    "getSignature": {
+                        "name": "message",
+                        "type": "string",
+                        "returnType": "string",
+                        "line": 29
+                    }
+                }
+            },
+            "templateData": "<button (click)=\"clicked()\">\n  <span>{{buttonText}}</span>\n</button>\n<div>{{message}}</div>\n"
         }
     ],
     "modules": [
+        {
+            "name": "AboutModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "AboutComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": [
+                        {
+                            "name": "AboutRoutingModule"
+                        }
+                    ]
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
+        {
+            "name": "AboutRoutingModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": []
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": []
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
+        },
         {
             "name": "AppModule",
             "children": [
@@ -449,15 +675,6 @@
                     "elements": [
                         {
                             "name": "AppComponent"
-                        },
-                        {
-                            "name": "ButtonComponent"
-                        },
-                        {
-                            "name": "FooterComponent"
-                        },
-                        {
-                            "name": "HeaderComponent"
                         }
                     ]
                 },
@@ -466,6 +683,9 @@
                     "elements": [
                         {
                             "name": "AppRoutingModule"
+                        },
+                        {
+                            "name": "SharedModule"
                         }
                     ]
                 },
@@ -536,12 +756,19 @@
                     "elements": [
                         {
                             "name": "HomeRoutingModule"
+                        },
+                        {
+                            "name": "SharedModule"
                         }
                     ]
                 },
                 {
                     "type": "exports",
-                    "elements": []
+                    "elements": [
+                        {
+                            "name": "HomeComponent"
+                        }
+                    ]
                 },
                 {
                     "type": "bootstrap",
@@ -647,10 +874,81 @@
                     "elements": []
                 }
             ]
+        },
+        {
+            "name": "SharedModule",
+            "children": [
+                {
+                    "type": "providers",
+                    "elements": []
+                },
+                {
+                    "type": "declarations",
+                    "elements": [
+                        {
+                            "name": "ButtonComponent"
+                        },
+                        {
+                            "name": "FooterComponent"
+                        },
+                        {
+                            "name": "HeaderComponent"
+                        },
+                        {
+                            "name": "SimpleButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "imports",
+                    "elements": []
+                },
+                {
+                    "type": "exports",
+                    "elements": [
+                        {
+                            "name": "ButtonComponent"
+                        },
+                        {
+                            "name": "FooterComponent"
+                        },
+                        {
+                            "name": "HeaderComponent"
+                        },
+                        {
+                            "name": "SimpleButtonComponent"
+                        }
+                    ]
+                },
+                {
+                    "type": "bootstrap",
+                    "elements": []
+                },
+                {
+                    "type": "classes",
+                    "elements": []
+                }
+            ]
         }
     ],
     "miscellaneous": {
         "variables": [
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/shared/components/footer/Footer.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/shared/components/simple-button/Simple-button.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
             {
                 "name": "environment",
                 "ctype": "miscellaneous",
@@ -668,10 +966,18 @@
                 "defaultValue": "{\n  production: false\n}"
             },
             {
+                "name": "IsOnTrue",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/shared/components/simple-button/Simple-button.stories.ts",
+                "type": "",
+                "defaultValue": "Template.bind({})"
+            },
+            {
                 "name": "Large",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/component/button/Button.stories.ts",
+                "file": "src/app/shared/components/button/Button.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -687,7 +993,7 @@
                 "name": "LoggedIn",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/component/header/Header.stories.ts",
+                "file": "src/app/shared/components/header/Header.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -703,15 +1009,7 @@
                 "name": "LoggedOut",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/component/header/Header.stories.ts",
-                "type": "",
-                "defaultValue": "Template.bind({})"
-            },
-            {
-                "name": "Normal",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "src/app/shared/component/footer/Footer.stories.ts",
+                "file": "src/app/shared/components/header/Header.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -719,7 +1017,7 @@
                 "name": "Primary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/component/button/Button.stories.ts",
+                "file": "src/app/shared/components/button/Button.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -727,7 +1025,7 @@
                 "name": "Secondary",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/component/button/Button.stories.ts",
+                "file": "src/app/shared/components/button/Button.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -735,7 +1033,7 @@
                 "name": "Small",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/component/button/Button.stories.ts",
+                "file": "src/app/shared/components/button/Button.stories.ts",
                 "type": "",
                 "defaultValue": "Template.bind({})"
             },
@@ -751,7 +1049,15 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/component/footer/Footer.stories.ts",
+                "file": "src/app/shared/components/button/Button.stories.ts",
+                "type": "Story<ButtonComponent>",
+                "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
+            },
+            {
+                "name": "Template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/shared/components/footer/Footer.stories.ts",
                 "type": "Story<FooterComponent>",
                 "defaultValue": "(args: FooterComponent) => ({\n  component: FooterComponent\n})"
             },
@@ -759,7 +1065,7 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/component/header/Header.stories.ts",
+                "file": "src/app/shared/components/header/Header.stories.ts",
                 "type": "Story<HeaderComponent>",
                 "defaultValue": "(args: HeaderComponent) => ({\n  component: HeaderComponent,\n  props: args,\n})"
             },
@@ -767,15 +1073,59 @@
                 "name": "Template",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "src/app/shared/component/button/Button.stories.ts",
-                "type": "Story<ButtonComponent>",
-                "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
+                "file": "src/app/shared/components/simple-button/Simple-button.stories.ts",
+                "type": "Story<SimpleButtonComponent>",
+                "defaultValue": "(args: SimpleButtonComponent) => ({\n  component: SimpleButtonComponent,\n  props: args,\n})"
             }
         ],
         "functions": [],
         "typealiases": [],
         "enumerations": [],
         "groupedVariables": {
+            "src/app/shared/components/footer/Footer.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/components/footer/Footer.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/components/footer/Footer.stories.ts",
+                    "type": "Story<FooterComponent>",
+                    "defaultValue": "(args: FooterComponent) => ({\n  component: FooterComponent\n})"
+                }
+            ],
+            "src/app/shared/components/simple-button/Simple-button.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/components/simple-button/Simple-button.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "IsOnTrue",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/components/simple-button/Simple-button.stories.ts",
+                    "type": "",
+                    "defaultValue": "Template.bind({})"
+                },
+                {
+                    "name": "Template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/shared/components/simple-button/Simple-button.stories.ts",
+                    "type": "Story<SimpleButtonComponent>",
+                    "defaultValue": "(args: SimpleButtonComponent) => ({\n  component: SimpleButtonComponent,\n  props: args,\n})"
+                }
+            ],
             "src/environments/environment.prod.ts": [
                 {
                     "name": "environment",
@@ -796,12 +1146,12 @@
                     "defaultValue": "{\n  production: false\n}"
                 }
             ],
-            "src/app/shared/component/button/Button.stories.ts": [
+            "src/app/shared/components/button/Button.stories.ts": [
                 {
                     "name": "Large",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/shared/component/button/Button.stories.ts",
+                    "file": "src/app/shared/components/button/Button.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -809,7 +1159,7 @@
                     "name": "Primary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/shared/component/button/Button.stories.ts",
+                    "file": "src/app/shared/components/button/Button.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -817,7 +1167,7 @@
                     "name": "Secondary",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/shared/component/button/Button.stories.ts",
+                    "file": "src/app/shared/components/button/Button.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -825,7 +1175,7 @@
                     "name": "Small",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/shared/component/button/Button.stories.ts",
+                    "file": "src/app/shared/components/button/Button.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -833,7 +1183,7 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/shared/component/button/Button.stories.ts",
+                    "file": "src/app/shared/components/button/Button.stories.ts",
                     "type": "Story<ButtonComponent>",
                     "defaultValue": "(args: ButtonComponent) => ({\n  component: ButtonComponent,\n  props: args,\n})"
                 }
@@ -864,12 +1214,12 @@
                     "defaultValue": "(args: HomeComponent) => ({\n  component: HomeComponent,\n  props: args\n})"
                 }
             ],
-            "src/app/shared/component/header/Header.stories.ts": [
+            "src/app/shared/components/header/Header.stories.ts": [
                 {
                     "name": "LoggedIn",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/shared/component/header/Header.stories.ts",
+                    "file": "src/app/shared/components/header/Header.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -877,7 +1227,7 @@
                     "name": "LoggedOut",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/shared/component/header/Header.stories.ts",
+                    "file": "src/app/shared/components/header/Header.stories.ts",
                     "type": "",
                     "defaultValue": "Template.bind({})"
                 },
@@ -885,27 +1235,9 @@
                     "name": "Template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "src/app/shared/component/header/Header.stories.ts",
+                    "file": "src/app/shared/components/header/Header.stories.ts",
                     "type": "Story<HeaderComponent>",
                     "defaultValue": "(args: HeaderComponent) => ({\n  component: HeaderComponent,\n  props: args,\n})"
-                }
-            ],
-            "src/app/shared/component/footer/Footer.stories.ts": [
-                {
-                    "name": "Normal",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/component/footer/Footer.stories.ts",
-                    "type": "",
-                    "defaultValue": "Template.bind({})"
-                },
-                {
-                    "name": "Template",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "src/app/shared/component/footer/Footer.stories.ts",
-                    "type": "Story<FooterComponent>",
-                    "defaultValue": "(args: FooterComponent) => ({\n  component: FooterComponent\n})"
                 }
             ]
         },
@@ -988,6 +1320,30 @@
                         ]
                     },
                     {
+                        "path": "about",
+                        "loadChildren": "./page/about/about.module#AboutModule",
+                        "children": [
+                            {
+                                "kind": "module",
+                                "children": [
+                                    {
+                                        "name": "routes",
+                                        "filename": "src/app/page/about/about-routing.module.ts",
+                                        "module": "AboutRoutingModule",
+                                        "children": [
+                                            {
+                                                "path": "",
+                                                "component": "AboutComponent"
+                                            }
+                                        ],
+                                        "kind": "module"
+                                    }
+                                ],
+                                "module": "AboutModule"
+                            }
+                        ]
+                    },
+                    {
                         "path": "**",
                         "redirectTo": "/404"
                     }
@@ -997,7 +1353,7 @@
         ]
     },
     "coverage": {
-        "count": 2,
+        "count": 3,
         "status": "low",
         "files": [
             {
@@ -1016,6 +1372,15 @@
                 "name": "AppComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/page/about/about.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "AboutComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
                 "status": "low"
             },
             {
@@ -1067,7 +1432,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/shared/component/button/Button.stories.ts",
+                "filePath": "src/app/shared/components/button/Button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1077,7 +1442,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/shared/component/button/Button.stories.ts",
+                "filePath": "src/app/shared/components/button/Button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1087,7 +1452,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/shared/component/button/Button.stories.ts",
+                "filePath": "src/app/shared/components/button/Button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1097,7 +1462,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/shared/component/button/Button.stories.ts",
+                "filePath": "src/app/shared/components/button/Button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1107,7 +1472,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/shared/component/button/Button.stories.ts",
+                "filePath": "src/app/shared/components/button/Button.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1117,7 +1482,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/shared/component/button/button.component.ts",
+                "filePath": "src/app/shared/components/button/button.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "ButtonComponent",
@@ -1126,17 +1491,17 @@
                 "status": "good"
             },
             {
-                "filePath": "src/app/shared/component/footer/Footer.stories.ts",
+                "filePath": "src/app/shared/components/footer/Footer.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Normal",
+                "name": "Default",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "src/app/shared/component/footer/Footer.stories.ts",
+                "filePath": "src/app/shared/components/footer/Footer.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1146,7 +1511,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/shared/component/footer/footer.component.ts",
+                "filePath": "src/app/shared/components/footer/footer.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "FooterComponent",
@@ -1155,7 +1520,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/shared/component/header/Header.stories.ts",
+                "filePath": "src/app/shared/components/header/Header.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1165,7 +1530,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/shared/component/header/Header.stories.ts",
+                "filePath": "src/app/shared/components/header/Header.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1175,7 +1540,7 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/shared/component/header/Header.stories.ts",
+                "filePath": "src/app/shared/components/header/Header.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -1185,13 +1550,52 @@
                 "status": "low"
             },
             {
-                "filePath": "src/app/shared/component/header/header.component.ts",
+                "filePath": "src/app/shared/components/header/header.component.ts",
                 "type": "component",
                 "linktype": "component",
                 "name": "HeaderComponent",
                 "coveragePercent": 0,
                 "coverageCount": "0/7",
                 "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/components/simple-button/Simple-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/components/simple-button/Simple-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "IsOnTrue",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/components/simple-button/Simple-button.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/components/simple-button/simple-button.component.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "SimpleButtonComponent",
+                "coveragePercent": 33,
+                "coverageCount": "2/6",
+                "status": "medium"
             },
             {
                 "filePath": "src/environments/environment.prod.ts",

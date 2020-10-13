@@ -1,9 +1,10 @@
 
 .app_home {
   &__container {
+    align-items: center;
     background-color:lightblue;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
   }
 }

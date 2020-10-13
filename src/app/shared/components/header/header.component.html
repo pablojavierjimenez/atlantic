@@ -9,21 +9,25 @@
     </div>
     <div>
       <a [routerLink]="'/home'">home</a>
+      <a [routerLink]="'/about'">about</a>
       <a [routerLink]="'/notFound'">404</a>
     </div>
     <div>
+
       <app-button
         *ngIf="user"
         size="small"
         (onClick)="onLogout.emit($event)"
         label="Log out"
       ></app-button>
+
       <app-button
         *ngIf="!user"
         size="small"
         (onClick)="onLogin.emit($event)"
         label="Log in"
       ></app-button>
+
       <app-button
         *ngIf="!user"
         primary
