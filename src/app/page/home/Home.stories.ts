@@ -4,11 +4,11 @@ import { CommonModule, APP_BASE_HREF } from '@angular/common';
 import { Story, Meta } from '@storybook/angular/types-6-0';
 
 // Imports Component dependencies
-import { HeaderComponent } from './../../shared/component/header/header.component';
-import { ButtonComponent } from './../../shared/component/button/button.component';
+import { HeaderComponent } from './../../shared/components/header/header.component';
+import { ButtonComponent } from './../../shared/components/button/button.component';
 import { HomeComponent } from './home.component';
 
-import * as HeaderStories from '../../shared/component/header/Header.stories';
+import * as HeaderStories from '../../shared/components/header/Header.stories';
 import { RouterModule } from '@angular/router';
 
 
