@@ -1,36 +1,33 @@
-import { SharedModule } from './../../shared/shared.module';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HomeComponent } from './home.component';
+import { FooterComponent } from './footer.component';
 
-describe('Name of the group', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('FooterComponent', () => {
+  let component: FooterComponent;
+  let fixture: ComponentFixture<FooterComponent>;
 
   beforeEach(async( () => {
     TestBed.configureTestingModule({
-      imports: [SharedModule],
+      imports: [],
       declarations: [
-        HomeComponent
+        FooterComponent
       ],
       providers: []
     })
     .compileComponents().then(() => {
-      fixture = TestBed.createComponent(HomeComponent);
+      fixture = TestBed.createComponent(FooterComponent);
       component = fixture.componentInstance;
       fixture.detectChanges();
     });
   }));
 
-
   it('should create', () => {
     expect(component).toBeTruthy();
   });
 
-  it('H1 text content', () => {
+  it('Footer default text', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Hola soyla jom!');
+    expect(compiled.querySelector('p').textContent).toContain(' -- Atlantic footer 2020 -- ');
   });
-
 });
