@@ -1,0 +1,10 @@
+.app_about {
+  &__container {
+    background-color: lightcoral;
+    color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+}

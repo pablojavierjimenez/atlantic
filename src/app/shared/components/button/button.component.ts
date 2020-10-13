@@ -1,18 +1,12 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-  selector: 'storybook-button',
-  template: ` <button
-    type="button"
-    (click)="onClick.emit($event)"
-    [ngClass]="classes"
-    [ngStyle]="{ 'background-color': backgroundColor }"
-  >
-    {{ label }}
-  </button>`,
-  styleUrls: ['./button.css'],
+  selector: 'app-button',
+  templateUrl: './button.component.html',
+  styleUrls: ['./button.component.scss']
 })
-export default class ButtonComponent {
+export class ButtonComponent implements OnInit {
+
   /**
    * Is this the principal call to action on the page?
    */
@@ -45,9 +39,16 @@ export default class ButtonComponent {
   @Output()
   onClick = new EventEmitter<Event>();
 
-  public get classes(): string[] {
-    const mode = this.primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  constructor() { }
 
-    return ['storybook-button', `storybook-button--${this.size}`, mode];
+  ngOnInit(): void {
   }
+
+
+  public get classes(): string[] {
+    const mode = this.primary ? 'app-button--primary' : 'app-button--secondary';
+
+    return ['app-button', `app-button--${this.size}`, mode];
+  }
+
 }
