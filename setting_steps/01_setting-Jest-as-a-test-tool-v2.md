@@ -12,7 +12,7 @@
 - **Step 1: Install dependenciaes**
 
   ```bash
-  # Romoving karma - jasmine test dependencies and files
+  #Romoving karma-jasmine test dependencies files:
   :~$ npm remove karma karma-chrome-launcher karma-coverage-istanbul-reporter karma-jasmine karma-jasmine-html-reporter
   :~$ rm karma.conf.js src/test.ts
 
@@ -20,40 +20,32 @@
   :~$ npm install jest -g
 
   # Install Jest as a globbal dependency
-  :~$ pm i -D jest @types/jest @angular-builders/jest
+  :~$ pm i -D jest jest-preset-angular @types/jest @angular-builders/jest
   ```
 
 - **Step 2: Configure Jest**
 
-  Create the `Jest-setup.ts` with this content:
-  ```typescript
-  import 'jest-preset-angular';
-  ```
-
-  Edit the `tsconfig.spec.json` and fill it with the next content:
-  ```JSON
-  {
-    "extends": "./tsconfig.base.json",
-    "compilerOptions": {
-      "outDir": "./out-tsc/spec",
-      "types": [
-        "jest"
+  - **Step 2-A:** Edit the `tsconfig.spec.json` and fill it with the next content:
+    ```JSON
+    {
+      "extends": "./tsconfig.base.json",
+      "compilerOptions": {
+        "outDir": "./out-tsc/spec",
+        "types": [
+          "jest"
+        ]
+      },
+      "files": [
+        "src/test.ts",
+        "src/polyfills.ts"
+      ],
+      "include": [
+        "src/**/*.spec.ts",
+        "src/**/*.d.ts"
       ]
-    },
-    "files": [
-      "src/test.ts",
-      "src/polyfills.ts"
-    ],
-    "include": [
-      "src/**/*.spec.ts",
-      "src/**/*.d.ts"
-    ]
-  }
-  ```
-
-- **Step 3: add** 
-
-  Modify the `tsconfig.base.json` to add the nex configuration key:
+    }
+    ```
+  - **Step 2-B:** Modify the `tsconfig.base.json` to add the nex configuration key:
     ```JSON
     {
       //change te module to
@@ -62,9 +54,7 @@
     }
     ```
 
-- **Step 3: add** 
-
-  Modify the `angular.json` search the test object and replace with this:
+  - **Step 2-C:** Modify the `angular.json` search the test object and replace with this:
     ```JSON
     "test": {
       "builder": "@angular-builders/jest:run",
@@ -72,6 +62,14 @@
       }
     }
     ```
+
+- **Step 3: Configure Jest**
+
+  Create the `Jest-setup.ts` with this content:
+  ```typescript
+  import 'jest-preset-angular';
+  ```
+
 
 - **Step 4: Edit package.json to include Jest**
   
@@ -105,14 +103,9 @@
 
   and to end this step run test comand
   ```bash
+  #to run test you can use:
   :~$ npm test
+  :~$ npm run jest
+  #and this for coverage
+  :~$ npm run test:coverage
   ```
-
-- **Step 5: Uninstall Karma and jasmine**
-  ```bash
-  :~$ npm uninstall karma karma-chrome-launcher karma-coverage-istanbul-reporter karma-jasmine karma-jasmine-html-reporter
-  ```
-  And Remove `karma.conf.js` and `src/test.ts` files
-
-------
-
