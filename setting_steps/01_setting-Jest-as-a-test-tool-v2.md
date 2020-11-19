@@ -1,7 +1,8 @@
 ## How Setting Jest as a unit testing test tool
 
 ### *IMPORTANT!!! 
-*I use this tutorial to set up again* [*_LINK HERE_*](https://www.youtube.com/watch?v=cnfpdSzSUH4&ab_channel=TypeWithMe)
+- *I use this tutorial to set up again* [*_LINK HERE_*](https://www.youtube.com/watch?v=cnfpdSzSUH4&ab_channel=TypeWithMe)
+- [Angular jest builder](https://github.com/just-jeb/angular-builders/tree/master/packages/jest#jest-builder-for-angular-build-facade)
 
 ### Nota:
   - Here you can find the [Jest API Documentation](https://jestjs.io/docs/en/api)
@@ -11,7 +12,15 @@
 - **Step 1: Install dependenciaes**
 
   ```bash
-  :~$ npm install jest jest-preset-angular @types/jest --save-dev
+  # Romoving karma - jasmine test dependencies and files
+  :~$ npm remove karma karma-chrome-launcher karma-coverage-istanbul-reporter karma-jasmine karma-jasmine-html-reporter
+  :~$ rm karma.conf.js src/test.ts
+
+  # Install Jest as a globbal dependency
+  :~$ npm install jest -g
+
+  # Install Jest as a globbal dependency
+  :~$ pm i -D jest @types/jest @angular-builders/jest
   ```
 
 - **Step 2: Configure Jest**
@@ -28,8 +37,7 @@
     "compilerOptions": {
       "outDir": "./out-tsc/spec",
       "types": [
-        "jest",
-        "node"
+        "jest"
       ]
     },
     "files": [
@@ -48,9 +56,20 @@
   Modify the `tsconfig.base.json` to add the nex configuration key:
     ```JSON
     {
-      //....
-      "esModuleInterop": true,
+      //change te module to
+      "module": "commonjs",
       //...
+    }
+    ```
+
+- **Step 3: add** 
+
+  Modify the `angular.json` search the test object and replace with this:
+    ```JSON
+    "test": {
+      "builder": "@angular-builders/jest:run",
+      "options": {
+      }
     }
     ```
 
