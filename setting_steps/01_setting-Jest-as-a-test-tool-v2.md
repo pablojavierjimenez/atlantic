@@ -6,6 +6,7 @@
 
 ### Nota:
   - Here you can find the [Jest API Documentation](https://jestjs.io/docs/en/api)
+  - [Angular jest builder - Documentation](https://www.npmjs.com/package/@angular-builders/jest)
   - This **Jest** settin is based on [this tutorial](https://dev.to/alfredoperez/angular-10-setting-up-jest-2m0l)
 
 
