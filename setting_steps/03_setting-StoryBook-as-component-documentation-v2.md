@@ -2,6 +2,7 @@
 
 ### Nota:
   - Here you can find the [Storybook Documentation for angular](https://storybook.js.org/docs/angular/get-started/introduction)
+-----
 
 - **Step 1: Install Storybook dependenciaes**
   ```bash

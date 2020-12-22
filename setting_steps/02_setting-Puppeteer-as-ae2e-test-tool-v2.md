@@ -4,6 +4,7 @@
   - Here you can find the [Puppeteer Documentation](https://pptr.dev/)
   - For wirite the test easily I recomend install the [_Headless Recorder - chrome extencion_](https://chrome.google.com/webstore/detail/headless-recorder/djeegiggegleadkkbgopoonhjimgehda?utm_source=chrome-ntp-icon)
   - This **Puppeteer** setting with angular and prootractor is based on [this article](https://stackoverflow.com/questions/51536244/how-to-use-puppeteer-in-an-angular-application)
+-----
 
 - **Step 1: Install Puppeteer dependenciaes**
   ```bash
